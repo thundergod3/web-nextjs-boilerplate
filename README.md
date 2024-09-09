@@ -4,7 +4,12 @@ This is a boilerplate for Front End side with NextJS
 
 First, duplicate your local env file base on `.env.example` and replace with your value
 
-Then, run the development server:
+Then, run to install the module
+```bash
+yarn
+```
+
+Finally, run the development server:
 
 ```bash
 yarn dev
@@ -18,4 +23,19 @@ yarn dev
 - pages: where contain all components pages ( separate from `app` )
 - stores: where contain the global stores ( in this boilerplate, we're using [Redux Toolkit](https://redux-toolkit.js.org), but we still can replace with any others library and putting here )
 - hooks: where contain custom hooks
+  - we will follow the structure when separate base on module. Example
+    - commons: where contain all the global hooks: useModal, useNavigation, useQuery, etc
+    - [module]: like jobs where contain: useJobsColumn, useJobsData, useJobDetail, etc
+  - Then the structure will be
+    ```
+    hooks
+      commons
+        useModal
+        useQuery
+        useNavigtion
+      jobs
+        useJobsColumn
+        useJobsData
+        useJobDetail
+      ```
 - services: where storing all the services
